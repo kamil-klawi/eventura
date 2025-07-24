@@ -1,0 +1,14 @@
+@reference "tailwindcss";
+
+.container {
+  @apply w-full h-screen flex flex-col items-center justify-center bg-slate-100;
+
+  &__inner {
+    @apply w-full h-screen max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl p-8 bg-slate-50;
+
+    .breadcrumb {
+      @apply mb-4;
+      font-family: "Geist", sans-serif;
+    }
+  }
+}
