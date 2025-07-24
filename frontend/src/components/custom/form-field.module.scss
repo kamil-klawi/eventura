@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+.item {
+  @apply w-full relative;
+
+  &__label {
+    @apply text-sm text-slate-700;
+    font-weight: 500;
+    font-family: "Geist", sans-serif;
+  }
+
+  &__input {
+    @apply text-sm text-slate-700;
+    font-weight: normal;
+    font-family: "Geist", sans-serif;
+
+    &::placeholder {
+      @apply text-slate-400;
+    }
+  }
+
+  &__description {
+    @apply text-sm text-slate-400;
+    font-weight: normal;
+    font-family: "Geist", sans-serif;
+  }
+}
