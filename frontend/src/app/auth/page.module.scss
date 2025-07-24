@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.page {
+  @apply w-full flex flex-col gap-4;
+
+  &__title {
+    @apply text-3xl text-slate-700;
+    font-family: "Geist", sans-serif;
+  }
+
+  &__text {
+    @apply text-base text-slate-400;
+    font-family: "Geist", sans-serif;
+
+    &_link {
+      @apply px-1 hover:text-slate-700;
+    }
+  }
+
+  &__divider {
+    @apply w-full h-[1px] bg-slate-200;
+  }
+}
