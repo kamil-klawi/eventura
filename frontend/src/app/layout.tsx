@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import { QueryProvider } from "@/lib/providers/query-client";
+import Banner from "@/components/base/banner";
+import Header from "@/components/base/header";
+import Footer from "@/components/base/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,9 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}
+      >
         <QueryProvider>
-          {children}
+          <Banner />
+          <Header />
+          <div className="flex-1">{children}</div>
+          <Footer />
           <Toaster position={"top-center"} />
         </QueryProvider>
       </body>
