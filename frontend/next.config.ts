@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
   env: {
     SERVER_API_URL: process.env.SERVER_API_URL,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
