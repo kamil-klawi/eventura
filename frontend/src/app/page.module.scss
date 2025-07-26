@@ -1,0 +1,63 @@
+@reference "tailwindcss";
+
+.page {
+  @apply w-full h-full px-8 py-12 bg-white;
+  font-family: "Geist", sans-serif;
+
+  &__title {
+    @apply mb-2 text-3xl text-slate-700;
+  }
+
+  &__description {
+    @apply text-base text-slate-400 max-w-2xl;
+  }
+
+  &__divider {
+    @apply my-4 border-slate-300;
+  }
+
+  &__subtitle {
+    @apply mb-2 text-base text-slate-700;
+  }
+}
+
+.card {
+  @apply max-w-sm w-fit h-fit p-4 rounded-3xl;
+  background: linear-gradient(60deg, oklch(0.968 0.007 247.896), oklch(0.952 0.037 318.852));
+
+  &__image {
+    @apply w-full object-cover rounded-xl;
+  }
+
+  &__title {
+    @apply mb-1 text-lg text-slate-700;
+    font-weight: 400;
+  }
+
+  &__text {
+    @apply text-sm text-slate-400;
+    font-weight: 500;
+  }
+
+  &__divider {
+    @apply my-3 border-slate-300;
+  }
+
+  &__category {
+    @apply w-fit mb-1 px-2.5 py-1.5 text-xs text-slate-200 bg-slate-600 rounded-sm first-letter:uppercase;
+    font-weight: 600;
+  }
+
+  &__content {
+    @apply mt-3 flex flex-row items-center justify-between;
+
+    .content__info {
+      @apply flex flex-row items-center text-xs text-slate-400;
+      font-weight: 500;
+
+      .info__icon {
+        @apply me-1 size-4;
+      }
+    }
+  }
+}
