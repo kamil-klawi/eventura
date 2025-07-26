@@ -1,0 +1,88 @@
+@reference "tailwindcss";
+
+.page {
+  @apply w-full h-full px-8 py-4 bg-white;
+  font-family: "Geist", sans-serif;
+
+  &__container {
+    @apply flex flex-col gap-4;
+
+    .profile {
+      @apply w-full h-full p-4 flex flex-row items-center justify-start bg-slate-50 rounded-lg;
+
+      &__image {
+        @apply size-28 object-cover;
+      }
+
+      &__badge {
+        @apply px-2 py-1 bg-slate-900 text-slate-200;
+      }
+
+      &__badge_organizer {
+        @apply bg-indigo-300 text-slate-900;
+      }
+
+      &__badge_admin {
+        @apply bg-lime-300 text-slate-900;
+      }
+
+      &__title {
+        @apply text-3xl text-slate-700;
+      }
+
+      &__text {
+        @apply text-base text-slate-400;
+      }
+
+      &__content {
+        @apply flex flex-col ms-4 gap-2;
+
+        .badges {
+          @apply flex flex-row gap-2;
+        }
+      }
+    }
+
+    .events {
+      @apply w-full h-full p-4 flex flex-col justify-start;
+
+      &__title {
+        @apply text-xl text-slate-700;
+      }
+
+      &__text {
+        @apply text-base text-slate-400;
+      }
+
+      .card {
+        @apply mt-4 max-w-sm w-fit h-fit px-4 py-2 rounded-lg;
+        background: linear-gradient(60deg, oklch(0.967 0.067 122.328), oklch(0.953 0.051 180.801));
+
+        &__title {
+          @apply mb-2 text-base text-slate-900;
+        }
+
+        &__text {
+          @apply text-sm text-slate-600;
+        }
+
+        &__content {
+          @apply mt-4 flex flex-row items-center justify-between gap-4;
+
+          .card__text {
+            @apply flex flex-row items-center text-sm gap-1;
+            font-weight: 500;
+          }
+
+          .card__icon {
+            @apply size-4;
+          }
+        }
+      }
+    }
+  }
+
+  &__divider {
+    @apply w-full h-[1px] bg-slate-200;
+  }
+}
